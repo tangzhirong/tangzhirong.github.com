@@ -9,6 +9,7 @@
 <body>
 <script type="text/javascript" src="../src/lock.js"></script>
 <script type="text/javascript">
+    //获取设备屏幕宽度
     var screenWidth = window.screen.width;
     //构造专属于你的手势密码
     var yourLock = new lock({
@@ -19,6 +20,12 @@
     yourLock.renderDom();  //创建DOM结构
     yourLock.init();   //初始化组件
     yourLock.bindEvent();  //绑定事件
+
+    //方便移动端不同设备的调试
+    window.onresize = function(){
+       location.reload();  //切换设备，自动刷新
+    }
+
 </script>
 </body>
 </html>
